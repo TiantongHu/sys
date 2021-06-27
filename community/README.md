@@ -22,7 +22,8 @@ To run the container:
   Typical options are: 
    * `--rm` removes the container after existing
   
-   * `-v <path to working directory>:/host` which will copy everything under the directory into the `/host` directory in the image
+   * `-v <path to working directory>:/host` which will mount your working directory with the `/host` directory in the container, so you can acess any needed file
+     * Add `--read-only` before `-v` to make the directory read only in the container 
     
      * Inside the container, you can use `$ cp <path to file> /host` to copy files in the image to the `<working directory>` you stated in `-v` option.
  
